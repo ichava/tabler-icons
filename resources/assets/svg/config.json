@@ -1,0 +1,72 @@
+{
+    "schema_version": "1.0",
+    "package": {
+        "name": "ichava/tabler-icons",
+        "title": "Tabler Icons",
+        "description": "Over 5,200 pixel-perfect icons for web apps. Free and open source icons designed with attention to detail to make your design stand out.",
+        "keywords": ["icons", "svg", "tabler", "outline", "filled", "open-source", "pixel-perfect"],
+        "version": "1.0.0",
+        "upstream_version": "3.0.0",
+        "type": "single",
+        "license": "MIT"
+    },
+    "metadata": {
+        "authors": [
+            {
+                "name": "Paweł Kuna",
+                "email": "",
+                "role": "Creator & Designer",
+                "url": "https://twitter.com/codecalm"
+            }
+        ],
+        "homepage": "https://tabler-icons.io/",
+        "repository": "https://github.com/tabler/tabler-icons",
+        "data": {
+            "variants": {
+                "outline": {
+                    "name": "Outline",
+                    "slug": "outline",
+                    "description": "Outlined icon style with 2px stroke width",
+                    "default": true,
+                    "icon_suffix": "-outline",
+                    "display_order": 1,
+                    "attributes": {
+                        "stroke_width": 2,
+                        "fill": "none",
+                        "stroke": "currentColor"
+                    },
+                    "preview_icon": "home-outline",
+                    "color_scheme": "stroke-based"
+                },
+                "filled": {
+                    "name": "Filled",
+                    "slug": "filled",
+                    "description": "Solid filled icon style",
+                    "default": false,
+                    "icon_suffix": "-filled",
+                    "display_order": 2,
+                    "attributes": {
+                        "fill": "currentColor",
+                        "stroke": "none"
+                    },
+                    "preview_icon": "home-filled",
+                    "color_scheme": "fill-based"
+                }
+            },
+            "categories": {}
+        }
+    },
+    "config": {
+        "icon_prefix": "ti",
+        "defaults": {
+            "class": "w-6 h-6",
+            "stroke_width": 2,
+            "attributes": {}
+        },
+        "updater": {
+            "enabled": true,
+            "source": "https://api.github.com/repos/tabler/tabler-icons/releases/latest",
+            "auto_optimize": true
+        }
+    }
+}
