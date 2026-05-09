@@ -2,6 +2,13 @@
 
 All notable changes to `ichava/tabler-icons` follow [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Fixed
+
+- `composer.json` now declares `laranail/package-tools: ^1.0@dev` directly in `require` (was only listed in `repositories`, which left the dep undeclared and would have broken installs without the path repo fallback).
+- Test class in `tests/Feature/IconsTest.php` renamed from `TablerIconsTest` to `IconsTest` to match the filename and the class-name convention used by `bundled-icons` and `metronic-icons`.
+
 ## [1.0.0] - 2026-05-05
 
 ### Added

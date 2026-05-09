@@ -9,7 +9,7 @@ use Simtabi\Laranail\Ichava\TablerIcons\Constants\IconsConstants;
 use Simtabi\Laranail\Ichava\TablerIcons\Enums\Variant;
 use Simtabi\Laranail\Ichava\TablerIcons\Tests\TestCase;
 
-class TablerIconsTest extends TestCase
+class IconsTest extends TestCase
 {
     public function test_provider_boots_without_error(): void
     {
