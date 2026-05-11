@@ -4,6 +4,14 @@ All notable changes to `ichava/tabler-icons` follow [Keep a Changelog](https://k
 
 ## [Unreleased]
 
+### Added
+
+- `upstream` block in `resources/assets/svg/config.json` participating in core's `ichava:icons:check-updates` tracker. Source is npm (`@tabler/icons`); registry-based polling avoids GitHub's 60/hour anonymous limit. CDN URL templates (jsdelivr, unpkg, github_raw) registered for runtime use.
+
+### Changed
+
+- Legacy `config.updater` block removed in favour of the canonical top-level `upstream` block defined by core's tracker schema.
+
 ### Fixed
 
 - `composer.json` now declares `laranail/package-tools: ^1.0@dev` directly in `require` (was only listed in `repositories`, which left the dep undeclared and would have broken installs without the path repo fallback).

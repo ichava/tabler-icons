@@ -70,18 +70,41 @@ For things that apply to every Ichava icon pack:
 
 Browse the full library at [tabler-icons.io](https://tabler-icons.io) or visually via the [`ichava/browser`](https://github.com/ichava/browser) SPA.
 
-## Updating from upstream
+## CDN endpoints (skip vendoring entirely)
 
-```bash
-php artisan ichava:update-tabler-icons
+If you'd rather not ship the ~5MB of bundled SVGs inside your composer install,
+serve them from a CDN. The pack registers its CDN URL templates in
+`config.json` so other tooling can read them too; the canonical templates are:
+
+```
+https://cdn.jsdelivr.net/npm/@tabler/icons@{version}/icons/{variant}/{name}.svg
+https://unpkg.com/@tabler/icons@{version}/icons/{variant}/{name}.svg
+https://raw.githubusercontent.com/tabler/tabler-icons/v{version}/icons/{variant}/{name}.svg
 ```
 
-Pulls the latest Tabler release archive, replaces bundled SVGs, and re-seeds.
+- `{variant}` is `outline` or `filled`
+- `{name}` is the canonical icon slug (e.g. `home`, `arrow-right`)
+
+## Upstream tracking
+
+This pack participates in Ichava's upstream-tracking system. Run
+
+```bash
+php artisan ichava:icons:check-updates --package=ichava/tabler-icons
+```
+
+to see whether a newer `@tabler/icons` release exists. The check hits
+`registry.npmjs.org` (no rate limit), caches results for 12 hours, and
+dispatches `IconPackUpdateAvailable` events the host app can route to
+Slack / email / dashboards.
+
+See [`ichava/documentation/icon-pack-upstream-tracking.md`](https://github.com/ichava/documentation/blob/main/icon-pack-upstream-tracking.md)
+for the full schema + how to subscribe to update events.
 
 ## Requirements
 
 - PHP 8.3+
-- Laravel 10, 12, or 13+
+- Laravel 13+
 - [`ichava/core`](https://github.com/ichava/core) `^1.0`
 
 ## Contributing

@@ -62,11 +62,27 @@
             "class": "w-6 h-6",
             "stroke_width": 2,
             "attributes": {}
+        }
+    },
+    "upstream": {
+        "source": {
+            "type": "npm",
+            "package": "@tabler/icons",
+            "_why_npm": "Tabler publishes SVGs to npm same-day as GitHub releases; npm has no rate-limit ceiling."
         },
-        "updater": {
-            "enabled": true,
-            "source": "https://api.github.com/repos/tabler/tabler-icons/releases/latest",
-            "auto_optimize": true
+        "current_version": "3.0.0",
+        "version_check_url": "https://registry.npmjs.org/@tabler/icons/latest",
+        "license": "MIT",
+        "cdn": {
+            "jsdelivr": "https://cdn.jsdelivr.net/npm/@tabler/icons@{version}/icons/{variant}/{name}.svg",
+            "unpkg": "https://unpkg.com/@tabler/icons@{version}/icons/{variant}/{name}.svg",
+            "github_raw": "https://raw.githubusercontent.com/tabler/tabler-icons/v{version}/icons/{variant}/{name}.svg"
+        },
+        "update_command": {
+            "type": "github-archive",
+            "_note": "Refresh bundled SVGs from a tagged release. Re-run the pack's seeder after extracting.",
+            "archive_url": "https://github.com/tabler/tabler-icons/archive/refs/tags/v{version}.zip",
+            "source_path": "tabler-icons-{version}/icons"
         }
     }
 }
