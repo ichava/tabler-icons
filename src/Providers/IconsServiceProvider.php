@@ -26,8 +26,7 @@ class IconsServiceProvider extends ServiceProvider
         $package
             ->setName(IconsConstants::getVendorPackage())
             ->setPathFrom(source: $this, levelsUp: 2)
-            ->hasConfigFile('tabler-icons')
-            ->hasCommand(\Simtabi\Laranail\Ichava\TablerIcons\Commands\UpdateIconsCommand::class);
+            ->hasConfigFile('tabler-icons');
     }
 
     public function bootingPackage(): void
