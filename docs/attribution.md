@@ -25,11 +25,16 @@ The Tabler maintainers do not require attribution per the licence, but small cre
 
 ## Updating from upstream
 
-```bash
-php artisan ichava:update-tabler-icons
-```
+Asset refreshes run **maintainer-side** via
+[`ichava/maintainer-toolkit`](https://github.com/ichava/maintainer-toolkit).
+Cron polls `@tabler/icons` on npm, refreshes the bundled SVGs when
+upstream moves, and opens a PR. A human reviews + tags a release;
+Packagist + `composer update` fans the change out.
 
-Pulls the latest tagged Tabler release archive, replaces the bundled SVGs, and re-seeds.
+End users **don't** refresh locally -- `vendor/` is regenerated on every
+`composer install`, so any local change is discarded. Run
+`php artisan ichava:icons:check-updates --package=ichava/tabler-icons`
+to see whether a new upstream version is available.
 
 ## See also
 
