@@ -1,4 +1,4 @@
-[← Tabler docs](README.md)
+[← Package README](../README.md#pack-specific-docs)
 
 # Variants
 

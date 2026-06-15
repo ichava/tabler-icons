@@ -45,7 +45,7 @@ Custom stroke width (outline variant only):
 
 ## Pack-specific docs
 
-Vendor-specific deep dives live in this repo under [`docs/`](docs/):
+Vendor-specific deep dives live in this repo under [`docs/`](docs/). Anything that applies to *every* Ichava icon pack lives in the [main documentation repo](https://github.com/ichava/documentation/blob/main/README.md#icon-packs).
 
 - [Variants](docs/variants.md), outline + filled
 - [Customisation](docs/customization.md), stroke width, currentColor, sizing
