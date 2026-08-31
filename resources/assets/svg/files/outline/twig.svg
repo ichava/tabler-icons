@@ -8,9 +8,11 @@
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
-  class="icon icon-tabler icons-tabler-outline icon-tabler-currency-rubel"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-twig"
 >
   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-  <path d="M8 19v-14h6a3 3 0 0 1 0 6h-8" />
-  <path d="M14 15h-8" />
+  <path d="M3 21l5 -4l3 -5l5 -2l5 -7" />
+  <path d="M16 10h5" />
+  <path d="M11 12v-8" />
+  <path d="M8 17h7" />
 </svg>
