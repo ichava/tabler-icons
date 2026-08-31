@@ -1,0 +1,34 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Simtabi\Laranail\Ichava\TablerIcons\View\Components;
+
+use Simtabi\Laranail\Ichava\View\Components\IconComponent as BaseIconComponent;
+use Simtabi\Laranail\Ichava\TablerIcons\Constants\IconsConstants;
+
+/**
+ * Blade component for the Tabler Icons set. See README for usage examples
+ * and accepted name formats.
+ */
+class IconComponent extends BaseIconComponent
+{
+    protected function getIconSet(): string
+    {
+        return IconsConstants::getPackageName();
+    }
+
+    protected function getVendorPackage(): string
+    {
+        return IconsConstants::getVendorPackage();
+    }
+
+    protected function getDefaultAttributes(): array
+    {
+        return [
+            'stroke-width'    => '2',
+            'stroke-linecap'  => 'round',
+            'stroke-linejoin' => 'round',
+        ];
+    }
+}
