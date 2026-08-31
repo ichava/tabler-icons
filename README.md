@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/packagist/l/ichava/tabler-icons.svg)](LICENSE)
 [![PHP Version](https://img.shields.io/packagist/php-v/ichava/tabler-icons.svg)](https://packagist.org/packages/ichava/tabler-icons)
 
-5,900+ free MIT-licensed SVG icons from [Tabler Icons](https://tabler-icons.io) packaged for the [Ichava ecosystem](https://github.com/ichava/documentation). Outline + filled variants. Customisable stroke widths. Auto-updatable from upstream.
+6,184 free MIT-licensed SVG icons from [Tabler Icons](https://tabler-icons.io) packaged for the [Ichava ecosystem](https://github.com/ichava/documentation). Outline + filled variants. Customisable stroke widths. Auto-updatable from upstream.
 
 > Built on [`ichava/core`](https://github.com/ichava/core). See the [main documentation](https://github.com/ichava/documentation) for everything that applies to all icon packs.
 
@@ -63,7 +63,7 @@ For things that apply to every Ichava icon pack:
 
 ## What's included
 
-- 5,900+ icons across two variants
+- 6,184 icons across two variants
 - **Outline** (`2px` stroke, transparent fill, `currentColor` stroke, `stroke-linecap="round"`, `stroke-linejoin="round"`)
 - **Filled** (`currentColor` fill, no stroke)
 - All SVGs 24×24 with `viewBox="0 0 24 24"`

@@ -47,7 +47,7 @@ Below ~14 px outline icons start to lose definition. Switch to filled for very s
 
 ## Setting a default class globally
 
-In `config/ichava.php`:
+In `config/ichava/core.php`:
 
 ```php
 'components' => [
