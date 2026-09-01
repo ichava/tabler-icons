@@ -7,6 +7,7 @@ namespace Simtabi\Laranail\Ichava\TablerIcons\Tests\Feature;
 use Simtabi\Laranail\Ichava\Services\IconRegistry;
 use Simtabi\Laranail\Ichava\TablerIcons\Constants\IconsConstants;
 use Simtabi\Laranail\Ichava\TablerIcons\Enums\Variant;
+use Simtabi\Laranail\Ichava\TablerIcons\Providers\IconsServiceProvider;
 use Simtabi\Laranail\Ichava\TablerIcons\Tests\TestCase;
 
 class IconsTest extends TestCase
@@ -16,7 +17,7 @@ class IconsTest extends TestCase
         $providers = array_keys($this->app->getLoadedProviders());
 
         $this->assertContains(
-            \Simtabi\Laranail\Ichava\TablerIcons\Providers\IconsServiceProvider::class,
+            IconsServiceProvider::class,
             $providers
         );
     }
